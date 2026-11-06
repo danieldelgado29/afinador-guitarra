@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111716">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>Afinador de guitarra</title>
+<link rel="stylesheet" href="./style.css?v=7">
+<main>
+<header><span>●</span> GUITARRA / ESTROBO V7</header>
+<h1>Afinador</h1>
+<div class="options"><label>Afinación <select id="preset"><option value="standard">Estándar</option><option value="drop">Drop D</option><option value="half">Medio tono abajo</option><option value="chromatic">Cromática</option></select></label><label>Referencia <select id="ref"><option>440</option><option>438</option><option>439</option><option>441</option><option>442</option><option>443</option><option>444</option></select></label></div>
+<section id="readout" aria-label="Lectura de afinación">
+<div id="note">—</div><div id="freq">— Hz</div>
+<div id="strobe" class="strobe" aria-hidden="true"><div></div><div></div><div></div></div>
+<div class="scale"><i></i><i></i><i></i><i></i><i></i><b id="needle" hidden></b></div>
+<div class="labels"><span>−50</span><span>0</span><span>+50</span></div>
+<p id="status" role="status">Activa el micrófono para empezar</p>
+</section>
+<div id="strings" aria-label="Cuerdas de la guitarra"></div>
+<button id="mic">Activar micrófono</button>
+<label class="input">Nivel del micrófono <meter id="input" min="0" max="1" value="0"></meter></label>
+<p class="hint">Auto identifica cualquier nota. Pulsa una cuerda para fijar el objetivo del estrobo.</p>
+</main>
+<script src="./pitch.js?v=7" defer></script>
+<script src="./app.js?v=7" defer></script>
+</html>
